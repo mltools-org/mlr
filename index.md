@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+# Multiple Linear Regression
 
-You can use the [editor on GitHub](https://github.com/mltools-org/mlr/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Import the *Marketing* dataset from the package *datarium*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+*Code 1:*
+```R
+data("marketing", package = "datarium")
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+*Code 2:*
+```R
+summary(marketing)
+```
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mltools-org/mlr/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+*Code 2:*
+```R
+   youtube          facebook       newspaper          sales      
+ Min.   :  0.84   Min.   : 0.00   Min.   :  0.36   Min.   : 1.92  
+ 1st Qu.: 89.25   1st Qu.:11.97   1st Qu.: 15.30   1st Qu.:12.45  
+ Median :179.70   Median :27.48   Median : 30.90   Median :15.48  
+ Mean   :176.45   Mean   :27.92   Mean   : 36.66   Mean   :16.83  
+ 3rd Qu.:262.59   3rd Qu.:43.83   3rd Qu.: 54.12   3rd Qu.:20.88  
+ Max.   :355.68   Max.   :59.52   Max.   :136.80   Max.   :32.40  
+```
 
-### Support or Contact
+```R
+model <- lm(sales ~ youtube + facebook + newspaper, data = marketing)
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```R
+summary(model)
+```
+
+
+
+
+
