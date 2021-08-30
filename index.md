@@ -7,13 +7,14 @@
 data("marketing", package = "datarium")
 ```
 
+## Generated descriptive statistic for all variable include in the marketing dataset 
 *Code 2:*
 ```R
 summary(marketing)
 ```
 
 
-*Code 2:*
+*Code 2 results:*
 ```R
    youtube          facebook       newspaper          sales      
  Min.   :  0.84   Min.   : 0.00   Min.   :  0.36   Min.   : 1.92  
@@ -24,10 +25,15 @@ summary(marketing)
  Max.   :355.68   Max.   :59.52   Max.   :136.80   Max.   :32.40  
 ```
 
+## Unsing lm() function to estimated the coefficients of our multiple linear regression
+
+*Code 3:*
 ```R
 model <- lm(sales ~ youtube + facebook + newspaper, data = marketing)
 ```
 
+
+*Code 3 results:*
 ```R
 summary(model)
 ```
