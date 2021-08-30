@@ -33,10 +33,35 @@ model <- lm(sales ~ youtube + facebook + newspaper, data = marketing)
 ```
 
 
-*Code 3 results:*
+## Generated the regression resut of our regression 
+*Code 4*
 ```R
 summary(model)
 ```
+*Code 4 results:*
+```R
+Call:
+lm(formula = sales ~ youtube + facebook + newspaper, data = marketing)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-10.5932  -1.0690   0.2902   1.4272   3.3951 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.526667   0.374290   9.422   <2e-16 ***
+youtube      0.045765   0.001395  32.809   <2e-16 ***
+facebook     0.188530   0.008611  21.893   <2e-16 ***
+newspaper   -0.001037   0.005871  -0.177     0.86    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.023 on 196 degrees of freedom
+Multiple R-squared:  0.8972,	Adjusted R-squared:  0.8956 
+F-statistic: 570.3 on 3 and 196 DF,  p-value: < 2.2e-16
+```
+
+
 
 
 
